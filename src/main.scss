@@ -1,0 +1,342 @@
+:root {
+  --white-color: #fff;
+  --br_color: #232323;
+  --ear-color: #4f4c5f;
+  --ear-inner-color: #ffbfc5;
+  --body-color: #6a647f;
+  --collar-color: #00ACC1;
+  --locket-color: #FF6E40;
+  --tail-end: #dadada;
+}
+
+.cat-container {
+  position: relative;
+  margin: 20px auto;
+  width: 560px;
+  font-size: 14px;
+  background-color: var(--white-color);
+}
+
+.ear {
+  position: absolute;
+  top: 1.857em;
+  left: -0.714em;
+  width: 18.571em;
+  height: 10.714em;
+  transform: rotate(35deg);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  border: 1em solid var(--br_color);
+  background-color: var(--ear-color);
+  animation: ear-wave 1.6s infinite ease-in-out;
+
+  &.right {
+    left: 10.571em;
+    transform: rotate(-35deg);
+  }
+}
+
+.ear-inner {
+  position: absolute;
+  top: 1.928em;
+  left: 2.785em;
+  width: 7.142em;
+  height: 7.142em;
+  box-sizing: border-box;
+  transform: rotate(-44deg);
+  border-radius: 0.9% 61% 0.9%;
+  border: 1em solid var(--br_color);
+  background-color: var(--ear-inner-color);
+
+  &.right {
+    left: 8.571em;
+    transform: rotate(138deg);
+  }
+}
+
+/* Head start */
+.face {
+  position: absolute;
+  overflow: hidden;
+  z-index: 20;
+  top: 1.428em;
+  left: 3.571em;
+  width: 21.428em;
+  height: 21.428em;
+  border-radius: 50%;
+  border: 1em solid var(--br_color);
+  background-color: var(--body-color);
+}
+
+.shadow {
+  position: absolute;
+  left: -3%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border-left: 2.5em solid var(--ear-color);
+}
+
+.eye {
+  position: absolute;
+  left: 20%;
+  top: 40%;
+  width: 1em;
+  height: 2.142em;
+  transform: translateX(-50%) scale(1);
+  border-radius: 1em;
+  background-color: var(--br_color);
+  animation: eye-wave 1.6s infinite ease-in-out;
+
+  &.right {
+    left: 80%;
+  }
+}
+
+.mouth {
+  position: absolute;
+  overflow: hidden;
+  top: 42.2%;
+  left: 25%;
+  width: 40%;
+  height: 35%;
+  border-radius: 44%;
+  border: 1em solid var(--br_color);
+  background-color: var(--white-color);
+}
+
+.mustache {
+  position: absolute;
+  top: 0.285em;
+  left: 1.571em;
+  width: 1.142em;
+  height: 1.214em;
+  border-radius: 50%;
+  border: 1em solid var(--br_color);
+
+  &.right {
+    left: 3.714em;
+  }
+}
+
+.cover {
+  position: absolute;
+  top: 0.285em;
+  left: 1.571em;
+  height: 1.5em;
+  width: 5.428em;
+  background-color: var(--white-color);
+}
+
+.round {
+  position: absolute;
+  top: 1.285em;
+  left: 1.571em;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background-color: var(--br_color);
+
+  &.center {
+    left: 3.714em;
+  }
+
+  &.right {
+    right: 1.714em;
+    left: auto;
+  }
+}
+/* Head end */
+
+/* Body start */
+.body-wrapper {
+  position: absolute;
+  z-index: 10;
+  top: 20.357em;
+  left: 5.571em;
+  overflow: hidden;
+  width: 19.5em;
+  height: 16.714em;
+}
+.body {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 17.5em;
+  height: 17.142em;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 1em solid var(--br_color);
+  background-color: var(--body-color);
+}
+
+.bottom-line {
+  position: absolute;
+  left: 0;
+  bottom: 1.428em;
+  width: 100%;
+  border-bottom: 1em solid var(--br_color);
+}
+
+.body-shadow {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  transform: rotate(40deg);
+  border-radius: 50%;
+  border-left: 2em solid rgba(0, 0, 0, 0.2);
+}
+
+.collar {
+  position: absolute;
+  top: -137%;
+  left: 50%;
+  width: 28.571em;
+  height: 28.571em;
+  border-radius: 50%;
+  transform: translate(-50%, 0);
+  background-color: var(--collar-color);
+  border: 1em solid var(--br_color);
+}
+
+.locket {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 2.142em;
+  height: 2.142em;
+  transform: translate(-50%, 68%);
+  border-radius: 50%;
+  background-color: var(--locket-color);
+  border: 1em solid var(--br_color);
+}
+
+.body-line {
+  position: absolute;
+  left: 50%;
+  bottom: 2em;
+  width: 1em;
+  height: 4.428em;
+  border-radius: 0.571em;
+  transform: translateX(-50%);
+  background-color: var(--br_color);
+
+  &.left, &.right {
+    bottom: 1.571em;
+    height: 4.857em;
+  }
+
+  &.left {
+    left: 25%;
+    transform: rotate(-25deg);
+  }
+
+  &.right {
+    left: 70%;
+    transform: rotate(25deg);
+  }
+}
+/* Body ends */
+
+/* Tail start */
+.tail {
+  position: absolute;
+  top: 16em;
+  left: 22.857em;
+  width: 12.285em;
+  height: 15.714em;
+  transform: rotate(0);
+  transform-origin: bottom left;
+  animation: tail-wave 1.6s infinite ease-in-out;
+}
+
+.part {
+  position: absolute;
+  width: 3.142em;
+  border-left: 1em solid var(--br_color);
+  border-right: 1em solid var(--br_color);
+  background-color: var(--ear-color);
+
+  &.one {
+    left: -0.714em;
+    z-index: 10;
+    bottom: 0.428em;
+    height: 5.714em;
+    transform: rotate(60deg);
+  }
+
+  &.two {
+    z-index: 9;
+    left: 3em;
+    bottom: 4.428em;
+    width: 2.928em;
+    height: 5.714em;
+    transform: rotate(18deg);
+  }
+}
+
+.tail-round {
+  position: absolute;
+  left: 1.958em;
+  bottom: 2.25em;
+  width: 3.142em;
+  height: 3em;
+  border-radius: 50%;
+  border: 1em solid var(--br_color);
+  background-color: var(--ear-color);
+
+  &.left {
+    top: 2.857em;
+    left: 4.142em;
+    border-radius: 40% / 60%;
+    transform: rotate(45deg);
+  }
+}
+
+.tail-end {
+  position: absolute;
+  z-index: 8;
+  top: -0.428em;
+  right: 0.428em;
+  width: 3em;
+  height: 4.714em;
+  transform: rotate(48deg);
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border: 1em solid var(--br_color);
+  background-color: var(--tail-end);
+}
+/* Tail end */
+
+/* animations */
+@keyframes tail-wave {
+  20% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes eye-wave {
+  20% {
+    transform: translateX(-50%) scale(1.4);
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+@keyframes ear-wave {
+  20% {
+    top: 1em;
+  }
+  100% {
+    top: 1.857em;
+  }
+}

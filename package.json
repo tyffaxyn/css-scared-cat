@@ -1,0 +1,25 @@
+{
+  "name": "scared-cat",
+  "version": "1.0.0",
+  "description": "Pure scared cat",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "./node_modules/.bin/parcel build index.html"
+  },
+  "keywords": [
+    "cat",
+    "css"
+  ],
+  "author": "Viki",
+  "license": "ISC",
+  "dependencies": {
+    "normalize.scss": "^0.1.0"
+  },
+  "devDependencies": {
+    "express": "^4.17.1",
+    "parcel": "^1.12.4",
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.5"
+  }
+}
